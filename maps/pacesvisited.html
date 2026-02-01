@@ -1,0 +1,39 @@
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svgmap@v2.18.1/dist/svg-map.umd.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/svgmap@v2.18.1/dist/svg-map.min.css" rel="stylesheet">
+
+<div id="svgMap"></div>
+
+<script>
+  new svgMap({
+  targetElementID: 'svgMap',
+  hideFlag: true,
+  noDataText: '',
+  data: {
+    data: {
+      users: {
+        name: 'Users',
+        format: '{0}',
+      },
+      rooms: {
+        name: 'Rooms',
+        format: '{0}'
+      },
+      wave: {
+        name: 'Wave',
+        format: '{0}'
+      }
+    },
+
+    applyData: 'users',
+    values: {
+      FR: {users: 1302, rooms: 80, wave: 1, color: '#5dcb8d'},
+      DE: {users: 970, rooms: 10, wave: 1, color: '#5dcb8d'},
+      ES: {users: 450, rooms: 15, wave: 2, color: '#2c724a'},
+      US: {users: 340, rooms: 15, wave: 3, color: '#1f9352'},
+      AU: {users: 230, rooms: 5, wave: 4, color: '#95d5b1'},
+      // ...
+    }
+  }
+});
+</script>
